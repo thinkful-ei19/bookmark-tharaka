@@ -4,4 +4,29 @@
   
   body {
     font-family: 'Roboto', sans-serif;
+    background-color: gray;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  .container {
+    height: 100%;
+  }
+
+  .bookmark-controls {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .bookmark-list {
+    margin-left: 10px;;
+  }
+
+  #js-rating-filter {
+    border: solid double #4e0505;
   }

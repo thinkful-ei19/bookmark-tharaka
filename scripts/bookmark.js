@@ -33,16 +33,16 @@ const bookmark = (function(){
 
     if(items.expandBookmark === true) {
      
-      link = items.url;
-      desc = items.desc;
+      link = `<a target="_blank" href="${items.url}">Visit Site</a>`;
+      desc = `Desc: ${items.desc}`;
     }
     
 
     return `<li class="bookmark-item" data-item-id="${items.id}">
         <header>
-            <span class="header-text">${items.title}</span>
+            <span class="header-text">Title: ${items.title}</span>
         </header>
-        <div <p class="ratings">${items.rating}</p> <div>
+        <div <p class="ratings"> Rating: ${items.rating}</p> <div>
         <article>
             <p class="description">${desc}</p>
             <p class='linkBookmark'>${link}</p>
@@ -127,8 +127,10 @@ const bookmark = (function(){
 
         itemFromServer.expandBookmark = false;
         store.addItem(itemFromServer);
-    
+
+        store.isAdding = false;
         render();
+
       });
       
     });
