@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-unused-vars
 const store = (function(){
     
-  const addItem = function(item) {
+  const addItem = function(item) {//item is an object
     this.items.push(item);
   };
 
@@ -15,11 +15,19 @@ const store = (function(){
     this.items = this.items.filter(item => item.id !== id);
   };
 
+  const searchByRating = function(num) {
+    //
+  };
+
+
   return {
-    items: [],
+    items: [],//array of ojects
+    isAdding: false,
+    minimumRating: 1,
     addItem,
     findById,
-    findAndDelete
+    findAndDelete,
+    searchByRating
   };
 
 }());
