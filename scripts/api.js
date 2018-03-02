@@ -3,7 +3,7 @@
 
 //eslint-disable-next-line no-unused-vars
 const api = (function () {
-  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/tj';
+  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/tharaka/items';
 
   const getItems = function(callback){
 
@@ -15,7 +15,7 @@ const api = (function () {
     const newItem = JSON.stringify({name: name});//change
   
     const settings = {
-      url: BASE_URL + '/items',
+      url: BASE_URL,
       method: 'POST',
 	    contentType: 'application/json',
 	    dataType: 'JSON',
@@ -25,21 +25,12 @@ const api = (function () {
 
     $.ajax(settings);
   };
-  
-   
-    $.ajax({
-      url : `${BASE_URL}/items/${id}`,
-      method: 'PATCH',
-      contentType: 'application/json',
-      data: JSON.stringify(updateData),
-      success: callback
-    });
-  };
+ 
 
   const deleteItem = function(id, callback) {
   
     $.ajax({
-      url : `${BASE_URL}/items/${id}`,
+      url : `${BASE_URL}/${id}`,
       method: 'DELETE',
       contentType: 'application/json',
       success: callback
