@@ -15,10 +15,11 @@ const store = (function(){
     this.items = this.items.filter(item => item.id !== id);
   };
 
-  const searchByRating = function(num) {
-    //
-  };
+  const toggleExpand = function(id) {
+    const expandItem = this.findById(id);
+    expandItem.expandBookmark = !expandItem.expandBookmark;
 
+  };
 
   return {
     items: [],//array of ojects
@@ -27,7 +28,7 @@ const store = (function(){
     addItem,
     findById,
     findAndDelete,
-    searchByRating
+    toggleExpand
   };
 
 }());
