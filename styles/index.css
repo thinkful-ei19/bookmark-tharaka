@@ -16,11 +16,17 @@
   }
   .container {
     height: 100%;
+    margin-left 15px;
+  }
+
+  .bookmark-controls {
+    
   }
 
   .bookmark-controls {
     display: inline-block;
     margin-bottom: 15px;
+    margin-left: 10px;
   }
 
   .bookmark-list {
@@ -29,4 +35,6 @@
 
   #js-rating-filter {
     border: solid double #4e0505;
+    background-color: #fff;
+    
   }
