@@ -9,15 +9,15 @@
 </head>
 
 <body>
-  <div class="container">
+  <main role='main container' class="container">
     <h1 role='title'>My Bookmarks</h1>
     <section role='bookmark controls' class="bookmark-controls">
          
          <form id="addBookmarkForm">
-                <button type="submit">Add Bookmark</button>
+                <button id='addButton' type="submit">Add Bookmark</button>
          </form>
          <form>
-                <select id="js-rating-filter" name="radioButtons"> <!--Supplement an id here instead of using 'text'-->
+                <select id="js-rating-filter" name="radioButtons"> 
                     <option value="1">1</option> 
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -27,18 +27,16 @@
          </form>
     </section>
 
-    <!-- After clicking add bookmark this form shows up -->
     <section role='bookmark form' class="bookmark-form">
 
     </section>
 
-    <!-- EXPAND -->
     <section role='bookmark list' class="bookmark-list js-bookmark-list">  
 
     </section>
 
 
-  </div>
+  </main>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
